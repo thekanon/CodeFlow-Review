@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "CodeFlow Review",
+  "version": "1.0",
+  "description": "ChatGPT를 통해 연쇄적인 코드 리뷰를 수행합니다.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
