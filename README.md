@@ -11,6 +11,7 @@
   3. 그 외 코드 개선점 제안
   4. 분석 내용 요약 (Markdown 형식)
 - **코드 리팩토링**: 각 분석 단계마다 리팩토링된 코드를 제공합니다.
+- **질문 관리 UI**: 코드 리뷰 질문 목록을 관리할 수 있는 사용자 인터페이스 제공
 
 ## 사용 방법
 
@@ -51,6 +52,7 @@
 
 - TypeScript
 - React
+- SCSS (스타일링)
 - WXT (Web Extension Tools)
 - Chrome Extensions API
 - PNPM (패키지 관리자)
@@ -66,6 +68,10 @@
 │   ├── content.ts           # 콘텐츠 스크립트
 │   └── popup                # 팝업 UI 컴포넌트
 │       ├── App.tsx          # 메인 React 컴포넌트
+│       ├── App.scss         # 메인 컴포넌트 스타일
+│       ├── QuestionsList.tsx # 질문 목록 컴포넌트
+│       ├── QuestionsList.scss # 질문 목록 스타일
+│       ├── components/      # 재사용 가능한 UI 컴포넌트
 │       ├── chatGptService.ts # ChatGPT 연동 서비스
 │       ├── constants.ts     # 상수 정의
 │       ├── domHelpers.ts    # DOM 관련 유틸리티 함수
@@ -99,6 +105,12 @@ pnpm dev
 pnpm build
 ```
 
+### 컴포넌트 구조
+
+- `App.tsx`: 메인 애플리케이션 컴포넌트
+- `QuestionsList.tsx`: 코드 리뷰 질문 목록을 관리하는 컴포넌트
+- `components/`: 재사용 가능한 UI 컴포넌트들이 위치한 디렉토리
+
 ### 코드 리뷰 질문 수정
 
 `entrypoints/popup/questions.ts` 파일에서 코드 리뷰 질문을 수정할 수 있습니다.
@@ -106,6 +118,10 @@ pnpm build
 ### 아이콘 변경
 
 `public/icon` 디렉토리의 이미지 파일들을 교체하여 확장 프로그램의 아이콘을 변경할 수 있습니다. 다양한 해상도(16x16, 32x32, 48x48, 96x96, 128x128)의 PNG 이미지를 준비해야 합니다.
+
+## 버전 관리
+
+버전 변경 정보는 프로젝트 루트의 `CHANGELOG.md` 파일에서 확인할 수 있습니다.
 
 ## 향후 개선 계획
 

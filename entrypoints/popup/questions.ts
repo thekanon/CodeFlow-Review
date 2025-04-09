@@ -1,4 +1,6 @@
 // questions.ts
+
+// 질문을 수정할 때는 이 파일을 수정, 아래는 기본 질문임.
 export function getQuestions(): string[] {
   return [
     "이 코드에 주석이 적절하게 달렸는지 평가하고, 주석을 추가해서 '리팩토링 된 코드 :' 라는 텍스트 이후 리팩토링 된 코드를 추가해줘",

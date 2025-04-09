@@ -2,7 +2,12 @@
   "name": "wxt-react-starter",
   "description": "manifest.json description",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "versionNotes": {
+    "0.0.3": "popup ui 개선 및 소스 저장",
+    "0.0.2": "wxt로 전환",
+    "0.0.1": "Initial version"
+  },
   "type": "module",
   "scripts": {
     "dev": "wxt",
@@ -22,6 +27,8 @@
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "@wxt-dev/module-react": "^1.1.2",
+    "sass": "^1.86.3",
+    "sass-embedded": "^1.86.3",
     "typescript": "^5.6.3",
     "wxt": "^0.20.0"
   }

@@ -1,5 +1,4 @@
 // injected.ts
-import { getQuestions } from "./questions";
 import {
   JS_CODE_SELECTOR,
   TEXT_CODE_SELECTOR,
@@ -9,10 +8,12 @@ import {
 import { extractRefactoredCode } from "./domHelpers";
 import { sendToChatGPT, waitForResponseComplete } from "./chatGptService";
 
-export function injectedStartReviewProcess(originalCode: string) {
+export function injectedStartReviewProcess(
+  originalCode: string,
+  questions: string[]
+) {
   console.log("리뷰 프로세스 시작됨");
 
-  const questions = getQuestions();
   let currentCode = originalCode;
 
   const textarea = document.querySelector(CHATGPT_TEXTAREA_SELECTOR);
